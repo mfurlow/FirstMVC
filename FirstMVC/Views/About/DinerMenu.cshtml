@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Diner2.FoodItem>
+<h3> Menu For Restaurant</h3>
+
+
+@foreach(var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(X => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.Price)
+        </td>
+    </tr>
+}
+@Html.ActionLink("Order","Order")

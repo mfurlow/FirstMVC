@@ -1,0 +1,55 @@
+﻿@model FirstMVC.Models.meal
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+        </style>
+    
+</head>
+<body>
+    <div>
+        @ViewData["someproperty"]
+    </div>
+    
+    <button type="button" class="btn btn-default">Default</button>
+
+    <div> 
+        @Model.price
+        </br>
+        @Model.food
+    </div>
+    <div class="container ">
+        <div class="row" >
+            <div class="  col-md-2">price:</div>
+            <div class=" col-md-4">@Model.price</div>
+        </div> 
+        <div class="row" >
+            <div class="col-md-offset-1 col-md-2" >food:</div>
+            <div class="col-md-4" >@Model.food</div>
+        </div> 
+    </div>
+    <br/>
+    <table class="table table-bordered" >
+        <tbody>
+            <tr>
+                <td>price:  </td>
+                <td>@Model.price</td>
+            </tr>
+            <tr>
+                <td>food:  </td>
+                <td>@Model.food</td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

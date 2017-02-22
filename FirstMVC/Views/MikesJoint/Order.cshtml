@@ -1,0 +1,28 @@
+﻿@model FirstMVC.Models.Cart
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Order</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            <div>name: @Html.TextBoxFor(x => x.CustomerName)</div>
+            <div>phone:@Html.TextBoxFor(x => x.CustomerName ) ></div>
+
+            foreach (var item in ViewData["Menu"] as List<IFoodItem>)
+            {
+                @Html.RadioButtonFor(x => x.Food.Name,item.Name)@item.Name
+            }
+        }
+    </div>
+</body>
+</html>

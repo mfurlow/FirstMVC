@@ -1,0 +1,28 @@
+﻿@model Diner2.Restuarant
+
+@{
+    ViewBag.Title = "menu";
+}
+
+
+    <div> 
+        <h1> @Model.Name</h1>
+        </br>
+        @Html.DisplayFor(x => x.Name)
+        </br>
+        @Html.DisplayFor(x => x.Location.Street)
+        </br>
+        @foreach (var item in Model.OrderMenu.foodItemList)
+        {
+            @Html.Label(item.Name)      
+          
+            <br/>
+            @item.Portion
+
+            @String.Format("{0} cost ${1}",item.Name,item.Price)
+            
+
+        }
+    </div>
+    @Html.ActionLink("Order", "Order")
+

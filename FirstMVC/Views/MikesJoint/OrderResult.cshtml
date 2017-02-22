@@ -1,0 +1,22 @@
+﻿@model FirstMVC.Models.Cart
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OrderResult</title>
+</head>
+<body>
+    <div> 
+        @Model.CustomerName
+        <br/>
+        @Model.Phone
+        <p> "you purchased a @Model.Food.Name "</p>
+    </div>
+</body>
+</html>

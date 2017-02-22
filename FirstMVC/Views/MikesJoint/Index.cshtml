@@ -1,0 +1,23 @@
+﻿
+
+@{
+    ViewBag.Title = "index";
+}
+
+<!DOCTYPE html>
+
+
+
+    <div> 
+        <h1> Welcome To @ViewBag.dinername</h1>
+        @Html.Action("DinerAddress","About")
+        <br/>
+        <p>"Click Below to Menu"</p>
+        @Html.ActionLink("Menu", "Menu",null, new { @class = "btn btn-info:" })
+        <br/>
+        
+       
+    </div>
+<div>
+    @Html.Action("DinerAddressWithData", "About", new Address("1st street", "a town", "AA", 12345))
+</div>

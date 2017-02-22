@@ -1,0 +1,16 @@
+﻿@model Diner2.Menu
+
+@{ 
+    ViewBag.Tltle = "DinerMenuWithAjax";
+    AjaxOptions options = new AjaxOptions
+    {
+        UpdateTargetId = "menuid"
+    };
+
+}
+
+<h2> Menu for Mikes Joint Restaurant @ViewBag.dinerName</h2>
+@Ajax.ActionLink("Show Menu","Menu", "About", options)
+<div id="menuid"></div>
+
+<br/>
